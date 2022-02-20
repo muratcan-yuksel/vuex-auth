@@ -1,5 +1,6 @@
 <template>
   <div class="homeComponent">Home</div>
+  <router-link to="/login">Login</router-link>
 </template>
 
 <script>
