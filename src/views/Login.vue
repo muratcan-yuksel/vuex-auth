@@ -1,5 +1,7 @@
 <template>
-  <div class="homeComponent">Home</div>
+  <div class="login">
+    <div>LOGIN</div>
+  </div>
 </template>
 
 <script>
