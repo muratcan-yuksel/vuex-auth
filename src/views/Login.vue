@@ -24,10 +24,10 @@ export default {
     };
   },
   methods: {
-    login(e) {
+    async login(e) {
       e.preventDefault();
       console.log("logged");
-      fetch("http://localhost:3000/login", {
+      const response = await fetch("http://localhost:3000/login", {
         method: "POST",
         headers: {
           "Content-type": "application/json",
@@ -37,6 +37,8 @@ export default {
           password: this.password,
         }),
       });
+      const { user, token } = await response.json();
+      console.log(user, token);
     },
   },
 };
